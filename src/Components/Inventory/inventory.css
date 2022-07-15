@@ -1,0 +1,149 @@
+.services-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.services-container img {
+    width: 100%;
+    padding: 15px;
+}
+
+.service-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service {
+    background-color: rgb(235, 249, 249);
+    border-radius: 5px;
+    width: 380px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.service-details{
+    padding: 8px 15px;
+    padding-bottom: 17px;
+}
+
+.service-details h6{
+    display: inline-block;
+}
+
+.stackAndPrice{
+    margin-top: 15px;
+}
+
+.stack .stackAndPrice{
+    margin: 0 0 5px 0;
+}
+
+.update-btn button{
+    transition: ease-in-out .400s;
+   border: solid 3px rgb(129, 130, 129);
+    border-radius: 8px;
+    padding: 5px 25px;
+    font-weight: bold;
+    color: rgb(110, 110, 110);
+}
+
+.update-btn button:hover{
+    background-color: rgb(7, 189, 156);
+    border: solid 3px rgb(7, 189, 156);
+    margin-top: 1px;
+    color: white;
+}
+
+.service-details .update-btn, .service-details .stackAndPrice{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-details .update-btn span, .service-details .stackAndPrice span, .update-info .stack span{
+    color: #06c572;
+    font-size: 22px;
+}
+
+.update-info .stack h5{
+    margin: 0;
+}
+
+.service-details h6{
+    margin-right: 5px;
+}
+
+.bg{ 
+        height: 200px;
+        width: 100vw;
+        background: linear-gradient(180deg, #010101, rgba(500, 500, 255, 0));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+}
+
+.bg h2{
+    -webkit-text-stroke: 2px rgb(196, 234, 8);
+	-webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.update-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+.update-img{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.update-img img{
+    width: 400px;
+}
+
+.update-info{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.update-info h6{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.stack button{
+    padding: 6px 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
+    color: #06c572;
+    background-color: rgba(243, 242, 242, 0.646);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.stack input{
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    width: 200px;
+    height: 37px;
+    margin: 10px 0;
+}

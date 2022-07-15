@@ -1,0 +1,114 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #27485B;
+    padding-top: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-items{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-items a, .footer-items p{
+color:  #1de2a3;
+padding: 0;
+margin-bottom: 5px;
+}
+
+.footer-items a:hover, .footer-items p:hover, .social-caption span:hover{
+color: white;
+padding: 0;
+margin-bottom: 5px;
+text-decoration: underline;
+}
+
+.social-caption .line{
+  height: 11px;
+  width: 2px;
+  margin-left: 3px;
+  padding-left: 3px;
+  display: inline-block;
+  border-left: 2px solid white;
+
+    
+}
+
+.footer-items .icon{
+    margin-right: 5px;
+}
+
+.footer-items, .footer-social{
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.item2 p{
+    width: 150px;
+}
+
+.item, .item2{
+    width: 280px;
+}
+
+
+.brand-item-p h3{
+margin: 0;
+font-weight: bold;
+} 
+
+.brand-item-p p{
+text-align: justify;
+margin: 0px;
+width: 220px;
+font-size: 17px;
+}
+
+.brand-item-p p:hover{
+text-align: justify;
+margin: 0px;
+text-decoration: none;
+}
+
+.footer-container hr{
+    width: 1020px;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+.footer-social{
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.social-icon{
+    margin: 15px;
+    border: 1px solid white;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.social-icon:hover{
+    margin: 15px;
+    border: 1px solid #1de2a3;
+    color: #1de2a3;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: .500s ease-in-out;
+}
+
+.social-caption{
+    padding-bottom: 30px;
+}

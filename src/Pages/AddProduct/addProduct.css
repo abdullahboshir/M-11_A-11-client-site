@@ -1,0 +1,22 @@
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.add-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(196, 196, 196);
+    width: 60vw;
+    padding: 30px;
+}
+
+.add-form input{
+    width: 25vw;
+    padding: 5px;
+    margin: 5px 5px;
+}
