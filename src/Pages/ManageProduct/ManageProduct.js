@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useServices from '../../hooks/useServices';
 import './manageProduct.css'
@@ -6,13 +6,30 @@ import './manageProduct.css'
 const ManageProduct = () => {
     const [services, setServices] = useServices();
     const navigate = useNavigate()
+
+    const handleDelete = id => {
+        const process = window.confirm('Are you sure you want to delete?')
+        if(process){
+            fetch(`http://localhost:5000/products/${id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                const remaining = services.filter(service => service._id !== id);
+                setServices(remaining)
+            })
+        }
+    }
+
+
     return (
         <div>
-          <div className='manage-container'>
+          <div className='manage-container' id='manage'>
           <h2>Manage Your Inventory</h2>
-            <button className='btn btn-primary'>Add a new item</button>
+            <button onClick={() => navigate('/addProduct')} className='btn btn-primary mb-2'>Add a new item</button>
             {
-                services.map(service => <div>
+                services.map(service => <div key={service._id}>
                     <div className="mange">
                         <div className="manage-item">
                             <img src={service.img} alt="" />
@@ -22,7 +39,7 @@ const ManageProduct = () => {
                         </div>
                         <div className="manage-btn">
                             <button onClick={() => navigate(`/updateStack/${service._id}`)} className='btn btn-info'>INVENTORY</button>
-                            <button  className='btn btn-danger'>DELETE</button>
+                            <button onClick={() => handleDelete(service._id)} className='btn btn-danger'>DELETE</button>
 
                         </div>
                     </div>

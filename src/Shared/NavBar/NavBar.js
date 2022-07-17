@@ -12,13 +12,9 @@ const NavBar = () => {
 
   const [user] = useAuthState(auth);
 
-  const signouthandle = () => {
-    signOut(auth);
-  }
-
   return (
     <nav>
-      <div className="nav-container">
+      <div className="nav-container" >
 
         <div className="nav-brand">
           <img src={logo} alt="" />
@@ -42,8 +38,6 @@ const NavBar = () => {
                   <li className='liItem'><NavLink className={({ isActive }) => isActive ? "active-nav" : 'nav-item'} to="/addProduct">AddProduct</NavLink></li>
 
                   <li className='liItem'><NavLink className={({ isActive }) => isActive ? "active-nav" : 'nav-item'} to="/manageProduct">ManageProduct</NavLink></li>
-
-                  <li className='liItem'> <NavLink className={({ isActive }) => isActive ? "active-nav" : 'nav-item'} to="/myProduct">MyProduct</NavLink> </li>
                 </>
                 : <></>
             }

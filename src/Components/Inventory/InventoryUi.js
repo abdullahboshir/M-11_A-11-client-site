@@ -11,7 +11,7 @@ const InventoryUi = ({ service }) => {
     }
 
     return (
-        <div className='service'>
+        <div className='service' id='inventory'>
             <div className='service-img'>
                 <img src={img} alt="" />
             </div>
@@ -30,7 +30,8 @@ const InventoryUi = ({ service }) => {
                 <div className='stackAndPrice'><h5>Price: <span>{price}</span></h5> <h5>Stack: <span>{stack}</span></h5></div>
                 <div className='update-btn'>
                     <button className='up-btn' onClick={() => handleUpdate(_id)}
-                    >UPDATE</button> <h5>Quantity: <span> {quantity}</span></h5>
+                    >UPDATE</button> 
+                    <h5>Quantity: <span> {quantity}</span></h5>
                 </div>
             </div>
         </div>

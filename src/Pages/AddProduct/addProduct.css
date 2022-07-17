@@ -4,13 +4,16 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    background-image: url('../../images/abstract-black-hexagon-mesh-pattern-2058887.jpg');
+    background-size: 100vw 100vh;
+    /* background-repeat: ; */
 }
 .add-form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(196, 196, 196);
+    background-color: rgba(65, 65, 65, 0.882);
     width: 60vw;
     padding: 30px;
 }
@@ -19,4 +22,16 @@
     width: 25vw;
     padding: 5px;
     margin: 5px 5px;
+}
+
+.add-form .add-btn{
+    background-color: rgb(126, 129, 127);
+    color: white;
+    border: none;
+}
+
+.add-btn:hover{
+    background-color: rgba(6, 222, 186, 0.972);
+    box-shadow: rgba(4, 244, 204, 0.972) 0px 2px 8px;
+    color: black;
 }

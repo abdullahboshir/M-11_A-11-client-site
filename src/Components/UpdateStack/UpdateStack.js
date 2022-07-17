@@ -1,37 +1,45 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
-import useSingleService from '../../hooks/useSingleService';
 
 const UpdateStack = () => {
     const {serviceId} = useParams();
-    const [service, setServices] = useSingleService(serviceId);
+    const [service, setServices] = useState({});
     const [updateQuantity, setUpdateQuantity] = useState(0)
     const { name, img, engine, mileage, price, topSpeed, quantity, brand, maxPower, minPower, stack, _id } = service;
 
-    const handleRestock = async (event) => {
-        event.preventDefault();
-        // const addQuantity = parseInt(updateQuantity);
 
-       try{
-        const url = `http://localhost:5000/products/${serviceId}`;
-        console.log('url', url, 'quan', updateQuantity)
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({quantity: parseInt(quantity) + parseInt(updateQuantity)})
-        })
+    useEffect(() => {
+        fetch(`http://localhost:5000/products/${serviceId}`)
         .then(res => res.json())
-        .then(data => {
-            console.log('success', data)
-            // event.target.reset()
-        })
-       }
-       catch(error){
-        console.log('problem', error)
-       }
+        .then(data => setServices(data))
+    }, [service, serviceId]);
+
+
+    const handleRestock = (event) => {
+        event.preventDefault();
+        const newQuantity = parseInt(updateQuantity) + parseInt(quantity);
+        const updateQuan = {newQuantity};
+        console.log(newQuantity)
+        try{
+            fetch(`http://localhost:5000/products/${serviceId}`, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(updateQuan)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log('success', data)
+                alert('user added successfully')
+                event.target.reset();
+            })
+        }
+        catch(error){
+            console.log(error)
+        }
     }
+    
     return (
         <div className='update-container'>
             <div className="update-img"><img src={img} alt="" /></div>

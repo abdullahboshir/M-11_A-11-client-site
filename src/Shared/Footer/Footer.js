@@ -14,22 +14,22 @@ import './footer.css'
 const Footer = () => {
     const navigate = useNavigate();
 
-    const checkoutNavigate = () => {
-        navigate("/checkout");
+    const handleaboutMe = () => {
+        navigate("/aboutMe");
     }
 
-    const blogsnavigate = () => {
+    const handleBlogs = () => {
         navigate("/blogs");
     }
 
-    const aboutnavigate = () => {
-        navigate("/about");
+    const handleAddProduct = () => {
+        navigate("/addProduct");
     }
-    const loginnavigate = () => {
-        navigate("/login");
+    const handleManageProduct = () => {
+        navigate("/manageProduct");
     }
 
-    const homenavigate = () => {
+    const handleHome = () => {
         navigate("/home");
     }
 
@@ -38,16 +38,16 @@ const Footer = () => {
         <div className="footer-container">
             <div className="footer-items">
                 <div className='item brand-item-p'>
-                    <h3>TRAVEL SENSE</h3>
-                    <p>It's  time  for  a  new journey</p>
+                    <h3>MOTO SPORT</h3>
+                    <p>Exclusive Collection</p>
                     </div>
                 <div className='item'>
                     <h5>NAVIGATION</h5>
-                    <NavLink to="/home" onClick={homenavigate} href= "#slider">Home</NavLink>
-                    <NavLink to="/checkout" onClick={checkoutNavigate} href= "#checkout">Checkout</NavLink>
-                    <NavLink to="/blogs" onClick={blogsnavigate} href= "#blog">Blogs</NavLink>
-                    <NavLink to="/about" onClick={aboutnavigate} href= "#about">About</NavLink>
-                    <NavLink to="/login" onClick={loginnavigate} href= "#login">Login</NavLink>
+                    <NavLink to="/home" onClick={handleHome} href= "#hero">Home</NavLink>
+                    <NavLink to="/blogs" onClick={handleBlogs} href= "#blog">Blogs</NavLink>
+                    <NavLink to="/aboutMe" onClick={handleaboutMe} href= "#about">About Me</NavLink>
+                    <NavLink to="/addProduct" onClick={handleAddProduct} href= "#add">Add Product</NavLink>
+                    <NavLink to="/manageProduct" onClick={handleManageProduct} href= "#manage">Manage Product</NavLink>
                     </div>
                 <div className='item'> 
                     <h5>COMPANY</h5>
@@ -55,7 +55,7 @@ const Footer = () => {
                    <p>Clients</p>
                    <p>Safety</p>
                    <p>Support</p>
-                   <p>Schedule</p>
+                   <p>Services</p>
                     </div>
                 <div className='item'>
                    <h5>CONTACT US</h5>

@@ -50,14 +50,14 @@ li .nav-item {
     padding: 5px 8px;
 }
 
-.liItem button{
+.liItem button {
     background-color: transparent;
     color: #f8bf2f;
     font-weight: bold;
     border: none;
 }
 
-.liItem button:hover{
+.liItem button:hover {
     color: rgb(169, 168, 167);
 }
 
@@ -67,6 +67,6 @@ li .active-nav {
     color: rgb(8, 210, 152);
 }
 
-li .active-nav:hover{
+li .active-nav:hover {
     color: #05d89c;
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+import AccordionDatas from '../../Components/Accordion/AccordionDatas';
 
 const Blogs = () => {
     return (
-        <div>
-            <h2>This is Blogs Page</h2>
+        <div id='blog'>
+           <AccordionDatas/>
         </div>
     );
 };

@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 .services {
@@ -84,19 +85,20 @@
 .bg{ 
         height: 200px;
         width: 100vw;
-        background: linear-gradient(180deg, #010101, rgba(500, 500, 255, 0));
+        /* background: linear-gradient(180deg, #010101, rgba(500, 500, 255, 0)); */
         display: flex;
         align-items: center;
-        justify-content: center;
-       
+        justify-content: center;  
 }
 
+
 .bg h2{
-    -webkit-text-stroke: 2px rgb(196, 234, 8);
-	-webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 2px rgb(196, 234, 8); */
+	-webkit-text-fill-color: rgb(58, 57, 57);
     text-transform: uppercase;
     font-size: 50px;
     font-weight: bold;
+    padding-top: 30px;
 }
 
 .update-container{

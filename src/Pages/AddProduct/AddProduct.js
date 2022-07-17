@@ -9,9 +9,9 @@ const AddProduct = () => {
     const [engine, setEngine] = useState("");
     const [mileage, setMileage] = useState("");
     const [speed, setSpeed] = useState("");
-    const [price, setPrice] = useState(0);
+    const [price, setPrice] = useState("");
     const [stack, setStack] = useState("");
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState("");
 
     const handleAddProduct = async (event) => {
         event.preventDefault();
@@ -26,7 +26,7 @@ const AddProduct = () => {
         // const stack = event.target.stack.value;
         // const quantity = event.target.quantity.value;
         const newProduct = {
-           name: name, brand:  brand, maxPower : max, minPower : min, engine: engine, mileage:  mileage, topSpeed: speed, price: price, stack:  stack, quantity: quantity
+           name: name, brand:  brand, maxPower : max, minPower : min, engine: engine, mileage:  mileage, topSpeed: speed, price: price, stack: stack, quantity: quantity
         };
        try{
        await fetch('http://localhost:5000/products', {
@@ -49,7 +49,7 @@ const AddProduct = () => {
     }
 
     return (
-        <div className='form-container'>
+        <div className='form-container' id='add'>
             <form onSubmit={handleAddProduct} className='add-form'>
                 <div>
                     <input onChange={(e) => setName(e.target.value)} value={name} type="text" name='name' placeholder='Name'  required/>
@@ -71,7 +71,7 @@ const AddProduct = () => {
                     <input onChange={(e) => setStack(e.target.value)} value={stack} type="text" name='stack' placeholder='Stack'  required/>
                     <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="text" name='quantity' placeholder='Quantity' required />
                 </div>
-                <input type="submit" name="Add Product" />
+                <input className='add-btn' type="submit" name="Add Product" />
             </form>
         </div>
     );
