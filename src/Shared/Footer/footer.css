@@ -15,7 +15,7 @@
 }
 
 .footer-items a, .footer-items p{
-color:  #1de2a3;
+color:  rgb(209, 182, 7);
 padding: 0;
 margin-bottom: 5px;
 }
@@ -100,8 +100,8 @@ text-decoration: none;
 
 .social-icon:hover{
     margin: 15px;
-    border: 1px solid #1de2a3;
-    color: #1de2a3;
+    border: 1px solid rgb(209, 182, 7);
+    color: rgb(209, 182, 7);
     width: 40px;
     height: 40px;
     padding: 8px;

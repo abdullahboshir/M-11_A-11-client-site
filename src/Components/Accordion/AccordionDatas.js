@@ -6,16 +6,16 @@ const AccordionDatas = () => {
     
     const accordiondata = [
         {
-            question: "Authentication: Difference between authorization and authentication?",
-            answer: "In authentication process, the identity of users are checked for providing the access to the system. 	Authorization: While in authorization process, person’s or user’s authorities are checked for accessing the resources."
+            question: "Difference between javascript and nodejs?",
+            answer: "1. NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.  2.Javascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script. Javascript is a high-level programming language that uses the concept of Oops but it is based on prototype inheritance. "
         },
         {
-            question: "Why are you using firebase? What other options do you have to implement authentication?",
-            answer: "Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more."
+            question: "When should we use MongoDB?",
+            answer: "NoSQL databases like MongoDB are a good choice when your data is document-centric and doesn’t fit well into the schema of a relational database, when you need to accommodate massive scale, when you are rapidly prototyping, and a few other use cases."
         },
         {
-            question: "What other services does firebase provide other than authentication?", 
-            answer: "There are many services which Firebase provides, Most useful of them are: Cloud Firestor, Cloud Functions, Authentication, Hosting, Cloud Storage, Google Analytics, Predictions, Cloud Messaging"
+            question: "What is the purpose of jwt and how does it work?", 
+            answer: "JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued."
         }
     ];
 

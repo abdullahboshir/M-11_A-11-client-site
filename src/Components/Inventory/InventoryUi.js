@@ -11,7 +11,7 @@ const InventoryUi = ({ service }) => {
     }
 
     return (
-        <div className='service' id='inventory'>
+        <div className='service'>
             <div className='service-img'>
                 <img src={img} alt="" />
             </div>

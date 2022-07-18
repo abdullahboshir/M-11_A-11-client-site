@@ -1,6 +1,5 @@
-import React, { useRef, useState } from 'react';
 import './login.css'
-// import bg from '../../images/login/bg.jpg'
+import bg from '../../images/login-img/hero-img4.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { AiFillFacebook } from 'react-icons/ai';
@@ -32,7 +31,7 @@ const Login = () => {
     }
 
 
-    let from = location.state?.from?.pathname || "/home";
+    let from = location.state?.from?.pathname || "/";
 
     if (user) {
         navigate(from, { replace: true });
@@ -43,7 +42,6 @@ const Login = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         signInWithEmailAndPassword(email, password);
-        console.log(email, password)
     }
 
    
@@ -51,10 +49,11 @@ const Login = () => {
     return (
         <div>
             <form className='login-page' onSubmit={handleLoginBlur} id= "login">
-            {/* <img src={bg} alt="" /> */}
+                <div className='overlay'></div>
+            <img src={bg} alt="" />
             <div className="login-container">
                 <div className='login'>
-                    <h2>LOGIN</h2>
+                    <h2>Login</h2>
                     <div>
                         <div className="social login-social-container">
                             < AiOutlineGoogle onClick={() => signInWithGoogle()} className='social-icon login-social' style={{ color: "white", marginBottom: "7px" }} />

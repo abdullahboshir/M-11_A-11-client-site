@@ -74,7 +74,7 @@ const Footer = () => {
                     < AiFillYoutube className='social-icon'/>
                     </div>
                 <div className="social-caption"><small>Copyright &copy; 
-                    {new Date().getFullYear()} Travel Sense <span className='line' /> <span>Privecy Policy</span>
+                    {new Date().getFullYear()} Moto Sport <span className='line' /> <span>Privecy Policy</span>
                     </small></div>
             </div>
         </div>

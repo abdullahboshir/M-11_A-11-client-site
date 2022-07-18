@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
-// import bg from '../../images/login/bg.jpg';
+import bg from '../../images/login-img/hero-img4.jpg'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
@@ -40,7 +40,8 @@ const location = useLocation();
 
     return (
         <form action="" onSubmit={handlesignup} className='login-page'>
-             {/* <img src={bg} alt="" /> */}
+             <div className='overlay'></div>
+             <img src={bg} alt="" />
             <div className="signup-container">
                 <div className='signup'>
                     <h2>Sign Up</h2>

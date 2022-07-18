@@ -6,7 +6,7 @@ import './inventory.css'
 const Inventory = () => {
     const [services, setServices] = useServices();
     return (
-        <div className='services-container'>
+        <div className='services-container' id='inventory'>
             <div className='bg'>
             <h2>Check our Inventory</h2>
             </div>

@@ -47,7 +47,7 @@ display: inline;
     color: white;
 }
 
-.check:hover{
+.check:hover, .hero-caption a:hover{
     background-color: rgba(6, 222, 186, 0.972);
     box-shadow: rgba(4, 244, 204, 0.972) 0px 2px 8px;
     color: white;
