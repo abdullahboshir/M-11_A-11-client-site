@@ -1,4 +1,4 @@
-.footer-container{
+.footer-container {
     display: flex;
     flex-direction: column;
     color: white;
@@ -7,89 +7,99 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.footer-items{
+.footer-items {
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer-items a, .footer-items p{
-color:  rgb(209, 182, 7);
-padding: 0;
-margin-bottom: 5px;
+.footer-items a,
+.footer-items p {
+    color: rgb(209, 182, 7);
+    padding: 0;
+    margin-bottom: 5px;
 }
 
-.footer-items a:hover, .footer-items p:hover, .social-caption span:hover{
-color: white;
-padding: 0;
-margin-bottom: 5px;
-text-decoration: underline;
+.footer-items a:hover,
+.footer-items p:hover,
+.social-caption span:hover {
+    color: white;
+    padding: 0;
+    margin-bottom: 5px;
+    text-decoration: underline;
 }
 
-.social-caption .line{
-  height: 11px;
-  width: 2px;
-  margin-left: 3px;
-  padding-left: 3px;
-  display: inline-block;
-  border-left: 2px solid white;
-
-    
+.footer-brand img {
+    width: 100px;
+    margin: 0 0 10px 42px;
 }
 
-.footer-items .icon{
+.social-caption .line {
+    height: 11px;
+    width: 2px;
+    margin-left: 3px;
+    padding-left: 3px;
+    display: inline-block;
+    border-left: 2px solid white;
+
+
+}
+
+.footer-items .icon {
     margin-right: 5px;
 }
 
-.footer-items, .footer-social{
+.footer-items,
+.footer-social {
     display: flex;
     width: 100%;
     /* align-items: center; */
     justify-content: center;
 }
 
-.item2 p{
+.item2 p {
     width: 150px;
 }
 
-.item, .item2{
+.item,
+.item2 {
     width: 280px;
 }
 
 
-.brand-item-p h3{
-margin: 0;
-font-weight: bold;
-} 
-
-.brand-item-p p{
-text-align: justify;
-margin: 0px;
-width: 220px;
-font-size: 17px;
+.brand-item-p h3 {
+    margin: 0;
+    font-weight: bold;
 }
 
-.brand-item-p p:hover{
-text-align: justify;
-margin: 0px;
-text-decoration: none;
+.brand-item-p p {
+    text-align: justify;
+    margin: 0px;
+    width: 220px;
+    font-size: 17px;
 }
 
-.footer-container hr{
+.brand-item-p p:hover {
+    text-align: justify;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.footer-container hr {
     width: 1020px;
     margin: 0 auto;
     padding-right: 10px;
 }
 
-.footer-social{
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin-top: 20px;
+.footer-social {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.social-icon{
+.social-icon {
     margin: 15px;
     border: 1px solid white;
     width: 35px;
@@ -98,7 +108,7 @@ text-decoration: none;
     border-radius: 50%;
 }
 
-.social-icon:hover{
+.social-icon:hover {
     margin: 15px;
     border: 1px solid rgb(209, 182, 7);
     color: rgb(209, 182, 7);
@@ -109,6 +119,6 @@ text-decoration: none;
     transition: .500s ease-in-out;
 }
 
-.social-caption{
+.social-caption {
     padding-bottom: 30px;
 }

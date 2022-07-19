@@ -1,5 +1,4 @@
 import './login.css'
-import bg from '../../images/login-img/hero-img4.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { AiFillFacebook } from 'react-icons/ai';
@@ -50,7 +49,7 @@ const Login = () => {
         <div>
             <form className='login-page' onSubmit={handleLoginBlur} id= "login">
                 <div className='overlay'></div>
-            <img src={bg} alt="" />
+            <img src='https://i.ibb.co/CMqT9PH/hero-img4.jpg' alt="" />
             <div className="login-container">
                 <div className='login'>
                     <h2>Login</h2>

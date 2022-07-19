@@ -10,7 +10,7 @@
 
 
 .accordion1{
-    background-color: #021B2A;
+    /* background-color: #021B2A; */
     height: 100vh;
     padding-top: 200px;
 }
@@ -92,7 +92,7 @@
     width: 100%;
     font-size: 16px;
     margin-top: 8px;
-    color: white;
+    color: rgb(17, 17, 17);
 }
 
 

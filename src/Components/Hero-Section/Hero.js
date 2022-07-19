@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-bootstrap';
-import logo from '../../images/Hero-img/hero-img3.jpg'
 const Hero = () => {
     const navigate = useNavigate();
     return (
@@ -13,7 +12,7 @@ const Hero = () => {
             <NavLink onClick={() => navigate('/home')}  to="/home" href= "#inventory" className='check'>Check Our Stack</NavLink>
            </div>
            <div className="hero-img">
-            <img src={logo} alt="" />
+            <img src='https://i.ibb.co/qJHmC0v/hero-img3.jpg' alt="" />
            </div>
         </div>
     );

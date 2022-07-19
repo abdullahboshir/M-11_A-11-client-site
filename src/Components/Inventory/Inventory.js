@@ -8,7 +8,7 @@ const Inventory = () => {
     return (
         <div className='services-container' id='inventory'>
             <div className='bg'>
-            <h2>Check our Inventory</h2>
+            <h2>our Inventory</h2>
             </div>
             <div className="services">
             {

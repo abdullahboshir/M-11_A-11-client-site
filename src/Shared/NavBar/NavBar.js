@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './navbar.css'
-import logo from '../../images/Logo/logo.png'
+import './navbar.css';
 import { NavLink } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
@@ -17,7 +16,7 @@ const NavBar = () => {
       <div className="nav-container" >
 
         <div className="nav-brand">
-          <img src={logo} alt="" />
+          <img src='https://i.ibb.co/KjTmPvY/logo.png' alt="" />
         </div>
 
         <div className="nav-items">
