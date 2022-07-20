@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './addProduct.css'
+import './addProduct.css';
 
 const AddProduct = () => {
     const [name, setName] = useState("");
@@ -12,19 +12,10 @@ const AddProduct = () => {
     const [price, setPrice] = useState("");
     const [stack, setStack] = useState("");
     const [quantity, setQuantity] = useState("");
+    const [img, setImg] = useState("");
 
     const handleAddProduct = async (event) => {
         event.preventDefault();
-        // const name = event.target.name.value;
-        // const brand = event.target.brand.value;
-        // const max = event.target.max.value;
-        // const min = event.target.min.value;
-        // const engine = event.target.engine.value;
-        // const mileage = event.target.mileage.value;
-        // const speed = event.target.speed.value;
-        // const price = event.target.price.value;
-        // const stack = event.target.stack.value;
-        // const quantity = event.target.quantity.value;
         const newProduct = {
            name: name, brand:  brand, maxPower : max, minPower : min, engine: engine, mileage:  mileage, topSpeed: speed, price: price, stack: stack, quantity: quantity
         };
@@ -67,10 +58,12 @@ const AddProduct = () => {
                     <input onChange={(e) => setSpeed(e.target.value)} value={speed} type="text" name='speed' placeholder='Top Speed'  required/>
                     <input onChange={(e) => setPrice(e.target.value)} value={price} type="number" name='price' placeholder='Price'  required/>
                 </div>
-                <div>
+                <div className='input-3'>
                     <input onChange={(e) => setStack(e.target.value)} value={stack} type="text" name='stack' placeholder='Stack'  required/>
-                    <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="text" name='quantity' placeholder='Quantity' required />
+                    <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="number" name='quantity' placeholder='Quantity' required />
+                    <input onChange={(e) => setImg(e.target.value)} value={img} type="text" name='imgUrl' placeholder='Image Url' required />
                 </div>
+              
                 <input className='add-btn' type="submit" name="Add Product" />
             </form>
         </div>

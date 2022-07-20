@@ -18,15 +18,16 @@ const UpdateStack = () => {
     const handleRestock = (event) => {
         event.preventDefault();
         const newQuantity = parseInt(updateQuantity) + parseInt(quantity);
-        const updateQuan = {newQuantity};
+        const updateQuan = newQuantity;
         console.log(newQuantity)
-        try{
+
+
             fetch(`http://localhost:5000/products/${serviceId}`, {
                 method: 'PUT',
                 headers: {
-                    'content-type': 'application/json'
+                    "content-Type": "application/json"
                 },
-                body: JSON.stringify(updateQuan)
+                body: JSON.stringify({quantity: updateQuan})
             })
             .then(res => res.json())
             .then(data => {
@@ -34,10 +35,6 @@ const UpdateStack = () => {
                 alert('user added successfully')
                 event.target.reset();
             })
-        }
-        catch(error){
-            console.log(error)
-        }
     }
     
     return (
