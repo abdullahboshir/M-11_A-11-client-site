@@ -10,7 +10,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const process = window.confirm('Are you sure you want to delete?')
         if(process){
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://desolate-falls-12074.herokuapp.com/products/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

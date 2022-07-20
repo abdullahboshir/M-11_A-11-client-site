@@ -9,7 +9,8 @@ const UpdateStack = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${serviceId}`)
+        const url = `https://desolate-falls-12074.herokuapp.com/products/${serviceId}`;
+        fetch(url)
         .then(res => res.json())
         .then(data => setServices(data))
     }, [service, serviceId]);
@@ -19,15 +20,15 @@ const UpdateStack = () => {
         event.preventDefault();
         const newQuantity = parseInt(updateQuantity) + parseInt(quantity);
         const updateQuan = newQuantity;
-        console.log(newQuantity)
+        console.log(updateQuan)
 
-
-            fetch(`http://localhost:5000/products/${serviceId}`, {
+        const url = `https://desolate-falls-12074.herokuapp.com/products/${serviceId}`;
+            fetch(url, {
                 method: 'PUT',
                 headers: {
-                    "content-Type": "application/json"
+                    "content-type": "application/json"
                 },
-                body: JSON.stringify({quantity: updateQuan})
+                body: JSON.stringify(updateQuan)
             })
             .then(res => res.json())
             .then(data => {

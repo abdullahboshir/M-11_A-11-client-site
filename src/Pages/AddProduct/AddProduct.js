@@ -20,7 +20,7 @@ const AddProduct = () => {
            name: name, brand:  brand, maxPower : max, minPower : min, engine: engine, mileage:  mileage, topSpeed: speed, price: price, stack: stack, quantity: quantity
         };
        try{
-       await fetch('http://localhost:5000/products', {
+       await fetch('https://desolate-falls-12074.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -60,7 +60,7 @@ const AddProduct = () => {
                 </div>
                 <div className='input-3'>
                     <input onChange={(e) => setStack(e.target.value)} value={stack} type="text" name='stack' placeholder='Stack'  required/>
-                    <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="number" name='quantity' placeholder='Quantity' required />
+                    <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="text" name='quantity' placeholder='Quantity' required />
                     <input onChange={(e) => setImg(e.target.value)} value={img} type="text" name='imgUrl' placeholder='Image Url' required />
                 </div>
               
