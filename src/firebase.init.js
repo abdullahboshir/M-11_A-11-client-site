@@ -5,19 +5,18 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyApSGOekq3V8SsKsovqQtx0SE2BJgCOf7E",
-  authDomain: "moto-sport.firebaseapp.com",
-  projectId: "moto-sport",
-  storageBucket: "moto-sport.appspot.com",
-  messagingSenderId: "696149424938",
-  appId: "1:696149424938:web:8a81350c03a87443c8fc53",
-  measurementId: "G-5CS1CDB3FG"
+  apiKey: "AIzaSyDGFoF_cQidKfSZxd0htTbhRzMwFLwb6Tw",
+  authDomain: "moto-sport-869ac.firebaseapp.com",
+  projectId: "moto-sport-869ac",
+  storageBucket: "moto-sport-869ac.appspot.com",
+  messagingSenderId: "795630921736",
+  appId: "1:795630921736:web:c7cfcf5974218c5a6f89bd"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 const auth = getAuth(app);
 
 export default auth;
