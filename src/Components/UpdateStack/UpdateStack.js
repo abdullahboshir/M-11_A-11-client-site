@@ -1,43 +1,64 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
 
 const UpdateStack = () => {
-    const {serviceId} = useParams();
+    const {id} = useParams();
     const [service, setServices] = useState({});
     const [updateQuantity, setUpdateQuantity] = useState(0)
     const { name, img, engine, mileage, price, topSpeed, quantity, brand, maxPower, minPower, stack, _id } = service;
 
-
+console.log(id)
     useEffect(() => {
-        const url = `https://desolate-falls-12074.herokuapp.com/products/${serviceId}`;
+        const url = `http://localhost:5000/products/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setServices(data))
-    }, [service, serviceId]);
+    }, [service, id]);
 
 
-    const handleRestock = (event) => {
+    const handleRestock = async (event) => {
         event.preventDefault();
-        const newQuantity = parseInt(updateQuantity) + parseInt(quantity);
-        const updateQuan = newQuantity;
-        console.log(updateQuan)
+        const newQuantity =  parseInt(updateQuantity) + parseInt(quantity);
 
-        const url = `https://desolate-falls-12074.herokuapp.com/products/${serviceId}`;
-            fetch(url, {
-                method: 'PUT',
-                headers: {
-                    "content-type": "application/json"
-                },
-                body: JSON.stringify(updateQuan)
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log('success', data)
-                alert('user added successfully')
-                event.target.reset();
-            })
-    }
-    
+        
+        
+
+    const url = `http://localhost:5000/products/${id}`;
+    fetch(url, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({quantity: newQuantity})
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log('success', data)
+        alert('user added successfully')
+        event.target.reset();
+    })
+
+
+
+//     await fetch(`http://localhost:5000/products/${id}`,{
+//     method: 'PUT',
+//     body: JSON.stringify(updateQuan),
+//     headers: {
+//       'Content-type': 'application/json; charset=UTF-8',
+//     },
+//    })
+//    .then(res => console.log(res))
+//    .then(data => {
+//     console.log(data)
+//     // swal(`Yah Success !",`, "success")
+//     // refetch()
+//    })
+
+};
+
+
+
+
     return (
         <div className='update-container'>
             <div className="update-img"><img src={img} alt="" /></div>
@@ -57,10 +78,10 @@ const UpdateStack = () => {
                 <div className='stackAndPrice'><h5>Quantity: <span>{quantity}</span></h5></div>
               <form onSubmit={handleRestock}>
               <input onChange={(e) => setUpdateQuantity(e.target.value)} value={updateQuantity} type="text" name='stack' placeholder='Stock increase'/>
-                <br /> 
+                <br />
                 <input className='submit-btn' type='submit' value='RESTOCK' />
               </form>
-              
+
                </div>
             </div>
            </div>

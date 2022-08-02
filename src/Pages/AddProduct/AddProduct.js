@@ -20,7 +20,7 @@ const AddProduct = () => {
            name: name, brand:  brand, maxPower : max, minPower : min, engine: engine, mileage:  mileage, topSpeed: speed, price: price, stack: stack, quantity: quantity
         };
        try{
-       await fetch('https://desolate-falls-12074.herokuapp.com/products', {
+       await fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

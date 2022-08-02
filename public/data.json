@@ -5,7 +5,7 @@
 
     {"name":"Suzuki GSX-R Dual ABS","brand":"Japan","price":"$4,829","img":"https://i.ibb.co/Y8MJ6r5/Suzuki-GSX-R-Dual-ABS-Yellow.jpg","quantity":"15", "stack": "Available", "engine":"147.3 cc","maxPower":"14.1 KW@10500 rpm","minPower":"14.0 Nm@9000 rpm","mileage":"45 Kmpl","topSpeed":"130 Kmph"},
 
-    {"name":"Suzuki Gixxer SF","brand":"Japan","price":"$5,299","img":"https://i.ibb.co/1LJQ4Y5/Honda-CBR150-R-Repsol.jpg","quantity":"15","engine":"155 cc","maxPower":"14.1ps@ 8000 rpm","minPower":"14.0 Nm@ 6000 rpm","mileage":"45 Kmpl","topSpeed":"125 Kmph"},
+    {"name":"Suzuki Gixxer SF","brand":"Japan","price":"$5,299","img":"https://i.ibb.co/1LJQ4Y5/Honda-CBR150-R-Repsol.jpg","quantity":"15","stack": "Available",  "engine":"155 cc","maxPower":"14.1ps@ 8000 rpm","minPower":"14.0 Nm@ 6000 rpm","mileage":"45 Kmpl","topSpeed":"125 Kmph"},
 
     {"name":"Zontes ZT155-G1","brand":"Chines","price":"$4,399","img":"https://i.ibb.co/Pz3JRs9/Zontes-ZT155-G1.jpg","quantity":"15", "stack": "Available", "engine":"155 cc","maxPower":"18.8 Hp @ 9250 rpm","minPower":"16 Nm @ 7500 rpm","mileage":"35 Kmpl","topSpeed":"125 Kmph"},
 
