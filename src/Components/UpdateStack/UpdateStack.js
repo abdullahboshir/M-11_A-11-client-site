@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
+import swal from 'sweetalert';
 
 const UpdateStack = () => {
     const {id} = useParams();
@@ -9,7 +10,7 @@ const UpdateStack = () => {
 
 console.log(id)
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://warm-wave-07165.herokuapp.com/products/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setServices(data))
@@ -20,10 +21,7 @@ console.log(id)
         event.preventDefault();
         const newQuantity =  parseInt(updateQuantity) + parseInt(quantity);
 
-        
-        
-
-    const url = `http://localhost:5000/products/${id}`;
+    const url = `https://warm-wave-07165.herokuapp.com/products/${id}`;
     fetch(url, {
         method: 'PUT',
         headers: {
@@ -34,33 +32,20 @@ console.log(id)
     .then(res => res.json())
     .then(data => {
         console.log('success', data)
-        alert('user added successfully')
+        swal({
+            title: "Good job!",
+            text: "Your Product has been added",
+            icon: "success",
+          });
         event.target.reset();
     })
-
-
-
-//     await fetch(`http://localhost:5000/products/${id}`,{
-//     method: 'PUT',
-//     body: JSON.stringify(updateQuan),
-//     headers: {
-//       'Content-type': 'application/json; charset=UTF-8',
-//     },
-//    })
-//    .then(res => console.log(res))
-//    .then(data => {
-//     console.log(data)
-//     // swal(`Yah Success !",`, "success")
-//     // refetch()
-//    })
-
 };
 
 
 
 
     return (
-        <div className='update-container'>
+        <div className='update-container' style={{heght: "100vh"}}>
             <div className="update-img"><img src={img} alt="" /></div>
            <div className="update-info">
            <div>

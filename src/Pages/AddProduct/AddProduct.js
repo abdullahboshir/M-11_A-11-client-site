@@ -20,7 +20,7 @@ const AddProduct = () => {
            name: name, brand:  brand, maxPower : max, minPower : min, engine: engine, mileage:  mileage, topSpeed: speed, price: price, stack: stack, quantity: quantity
         };
        try{
-       await fetch('http://localhost:5000/products', {
+       await fetch('https://warm-wave-07165.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

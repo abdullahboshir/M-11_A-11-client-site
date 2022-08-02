@@ -7,10 +7,14 @@ const ManageProduct = () => {
     const [services, setServices] = useServices();
     const navigate = useNavigate()
 
+
+
+
+
     const handleDelete = id => {
         const process = window.confirm('Are you sure you want to delete?')
         if(process){
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://warm-wave-07165.herokuapp.com/products/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
